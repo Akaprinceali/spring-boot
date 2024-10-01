@@ -1,1 +1,22 @@
-spring.application.name=employee-management-system
+spring:
+  application:
+    name: EmployeeManagementSystemApplication
+
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: mysql://localhost:3306/ems_data_jpa?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    show-sql: true
+    properties:
+      format_sql: true
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialact.MySQL8Dialact
+
+server:
+  port: 80
+
+
+
